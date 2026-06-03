@@ -24,6 +24,7 @@ services:
       - "6379:6379"  # Открыт наружу — не нужен
     networks:
       - taskflow-net
+      
 
   # PostgreSQL (не используется, но запущен)
   postgres:

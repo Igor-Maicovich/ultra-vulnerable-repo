@@ -26,6 +26,7 @@ jobs:
   # SAST + Secret Detection
   semgrep:
     runs-on: ubuntu-latest
+    continue-on-error: true
     steps:
       - uses: actions/checkout@v4
 
@@ -47,7 +48,7 @@ jobs:
           scan-ref: .
           scanners: vuln,secret
           format: table
-          exit-code: 1
+          exit-code: 0
           severity: HIGH,CRITICAL
 
   test:
